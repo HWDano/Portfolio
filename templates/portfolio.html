@@ -1,0 +1,37 @@
+{% include 'header.html' %}
+
+<div class="top-container">
+    <h1>Portfolio</h1>
+    <h3>A list of my own projects</h3>
+    <h3>and programming codes</h3>
+</div>
+<div class="middle-container">
+    {% for i in range(0, all_projects|length): %}
+        <section id="{{ all_projects[i][0].project_type }}">
+            {% if all_projects[i][0].project_type == 'printing': %}
+                <h4 class="section-title">3D Printing</h4>
+            {% else: %}
+                <h4 class="section-title">{{ all_projects[i][0].project_type[0]|upper }}{{ all_projects[i][0].project_type[1:] }}</h4>
+            {% endif %}
+            <div class="deck">
+                {% for project in all_projects[i]: %}
+                    <div class="project-container">
+                        <div class="project-element">
+                            <div class="front">
+                                <img class="project-image" alt="project-image" src="{{ project.image_url }}">
+                                <h3 class="project-title large">{{ project.title }}</h3>
+                            </div>
+                            <div class="back">
+                                <p class="small">{{ project.description }}</p>
+                                <br>
+                                <p class="small code-link">Find the code <a class="git-link" href="{{ project.code_url }}">here</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+    {% endfor %}
+</div>
+
+{% include 'footer.html' %}

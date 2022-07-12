@@ -1,0 +1,77 @@
+{% include "header.html" %}
+
+    <div class="top-container">
+      <img class="top-cloud" src="{{ url_for('static', filename='images/cloud.png')}}" alt="cloud-img">
+      <h1>I'm Daniel.</h1>
+      <h2>A Mechatronic Engineer.</h2>
+      <img class="bottom-cloud" src="{{ url_for('static', filename='images/cloud.png')}}" alt="cloud-img">
+      <img src="{{ url_for('static', filename='images/robot-arm.png')}}" alt="countain-img">
+    </div>
+    <div class="middle-container">
+      <section id="profile">
+        <div class="profile">
+          <img class="profile-img" src="{{ url_for('static', filename='images/profile.jpg')}}" alt="">
+          <h2>About me.</h2>
+          <p>I am a recent engineer in the process of titulation. With experience in 3D printing, AR, programming and a little bit of instruction.</p>
+        </div>
+      </section>
+
+      <div class="line-bw">
+      </div>
+
+      <section id="skills">
+        <div class="skills">
+          <h2>My Skills.</h2>
+          <div class="skill-row">
+            <img class="programming-img" src="https://media4.giphy.com/media/h408T6Y5GfmXBKW62l/giphy.gif?cid=ecf05e47qhlphm6vrschg1kfewzvaybv09md5245oacvpmbv&rid=giphy.gif&ct=g" alt="">
+            <h3>Programming</h3>
+            <p>I consider myself as a great programmer in diferent programming lenguages, covering the design of applications, logic controllers, robots and even programs that implement augmented reality.</p>
+          </div>
+          <div class="skill-row">
+            <img class="modeling-img" src="https://media.istockphoto.com/vectors/icon-3d-modeling-vector-id597937986?k=20&m=597937986&s=170667a&w=0&h=p-OZyIbOFzKvlKddK3_ro9NbfKxkVMDmxtIUxEbxivo=" alt="">
+            <h3>3D modeling</h3>
+            <p>One of my best skills is the ability to adapt and modify part designs to fit them into mechanisms of electronic products, with the use of CAD software.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="line-bw">
+      </div>
+
+      <section id="all-my-info">
+        <div class="complete-info">
+          <h2>Complete info.</h2>
+          <h3>Here you can se more about me, my work and my hobbies.</h3>
+          <div class="all-options">
+            <button class="info-option" onclick="window.location.href='{{ url_for('static', filename='cv/CV_Sierra Hernández Daniel Alejandro_Ingeniería mecatrónica.pdf') }}'">CV</button>
+<!--            <button class="info-option" onclick="window.location.href='{{ url_for('static', filename='cv/CV_Sierra Hernández Daniel Alejandro_Ingeniería mecatrónica.pdf') }}'">Hobbies</button>-->
+            <button class="info-option" onclick="window.location.href='{{ url_for('portfolio') }}'">Portfolio</button>
+<!--            <div class="info-option">-->
+<!--              <h3 class="info-slot">CV</h3>-->
+<!--            </div>-->
+<!--            <div class="info-option">-->
+<!--              <h3 class="info-slot">Hobbies</h3>-->
+<!--            </div>-->
+<!--            <div class="info-option">-->
+<!--              <h3 class="info-slot">Portfolio</h3>-->
+<!--            </div>-->
+          </div>
+        </div>
+      </section>
+
+      <div class="line-bw">
+      </div>
+
+      <section id="get-in-touch">
+        <div class="contact-me">
+          <h2>Get In Touch.</h2>
+          <h3 class=get-in-t"">If you need a big fan of technology.</h3>
+          <p class="get-in-t">Do you need someone with skills like mine? Let's find out with a little conversation.</p>
+          <a class="btn" href="mailto:DASierraH@outlook.com">CONTACT ME</a>
+        </div>
+      </section>
+    </div>
+
+{% include "footer.html" %}
+<!--  </body>-->
+<!--</html>-->
